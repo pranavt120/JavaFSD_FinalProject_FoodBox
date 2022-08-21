@@ -1,0 +1,9 @@
+
+input.ng-invalid,.input.ng-touched{
+    border: 1px solid red;
+}
+
+form{
+    max-width: 50%;
+    margin: auto;
+}

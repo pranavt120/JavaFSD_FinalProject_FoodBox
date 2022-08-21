@@ -1,0 +1,49 @@
+
+
+
+<div class="mb-5 mt-5 ">
+    <div class="form">
+        <h1 class="display-5 mt-2 text-center p-2">Login</h1>
+        <form (ngSubmit)="handleRegister(form)" #form = "ngForm"  class=" mt-2 mb-5  p-5" >
+    
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input class="form-control" placeholder="Enter Email" type="text" email ngModel name="email"  id="email" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="firstname" class="form-label">First Name</label>
+                <input class="form-control" placeholder="Enter First Name" type="text" required ngModel name="firstName"  id="firstname" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input class="form-control" placeholder="Enter Last Name" type="text" required ngModel name="lastName"  id="lastname" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input class="form-control" type="number" ngModel required name="phone"  id="phone" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="username" class="form-label">User Name</label>
+                <input class="form-control" placeholder="Enter User Name" type="text" ngModel name="userName"  id="username" >
+            </div>
+    
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input class="form-control" placeholder="Enter Password" type="password" ngModel name="password"  id="password" >
+        </div>
+        <!-- <p *ngIf="!authenticated">Wrong Username or password</p> -->
+        <p class="text-end fs-6"><a routerLink="../customerLogin" style="text-decoration:none ;">Log In</a></p>
+            
+        <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Sign Up">
+    
+    </form>
+    
+    </div>
+    
+
+</div>
+

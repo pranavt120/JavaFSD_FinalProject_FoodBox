@@ -1,0 +1,48 @@
+
+<h1 class="display-3 text-center mt-5">Update Food Item</h1>
+
+<div class="container mb-5">
+    <form  #form = "ngForm" (ngSubmit)="handleUpdate(form)" >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel  name="name" [(ngModel)]="foodItem.name"/>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Price</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" ngModel  name="price" [(ngModel)]="foodItem.price"/>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Description</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" ngModel  name="description" [(ngModel)]="foodItem.description"/>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Image Path</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" ngModel  name="path" [(ngModel)]="foodItem['image_path']"/>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Cusine</label>
+            <select class="form-select " aria-label="Default select example" ngModel name="cusineId" [(ngModel)]="foodItem.cusine.id" >
+                <option value="1" selected>Caribbean</option>
+                <option value="2">Vietnamese</option>
+                <option value="3">Korean</option>
+                <option value="4">German</option>
+                <option value="5">Indian</option>
+              </select>
+          </div>     
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Status</label>
+            <select class="form-select " aria-label="Default select example" ngModel name="status" [(ngModel)]="foodItem.status">
+                <option value="true" selected>Enable</option>
+                <option value="false">Disable</option>
+              </select>
+          </div> 
+          
+      
+        <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Submit" />
+        <p *ngIf="updated" class="lead">{{message}}</p>
+      </form>
+      <!-- <p class="lead mt-3" *ngIf="added">{{message}}</p> -->
+</div>
+

@@ -1,0 +1,14 @@
+
+<div class="container-fluid">
+    
+    <div class="row mt-5" >
+        <div class="col-xl-2 order-sm-1  mb-5  sidebar"><app-sidebar (filterEmitter)="populateFilter($event)"
+           (sortEmitter)="populateSort($event)" ></app-sidebar></div>
+
+        <div class=" col-xl-2 order-sm-3   mb-5  cart"><app-cart ></app-cart></div>
+        
+        <div class="  col-xl-8 order-sm-2  main"><app-main-content [filterId]="filter" [sortId]="sort"
+            (cartItem)="addToCart($event)" ></app-main-content></div>
+           
+    </div>
+</div>

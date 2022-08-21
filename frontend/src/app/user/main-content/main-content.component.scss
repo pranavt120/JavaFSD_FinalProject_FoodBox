@@ -1,0 +1,25 @@
+
+
+.card:hover{
+    cursor: pointer;
+    
+}
+.card{
+    border: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.addTOcart:hover{
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.mat-18{
+    position: relative;
+    font-size: medium;
+    top: 10px;
+}

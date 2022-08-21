@@ -1,0 +1,47 @@
+
+<h1 class="display-3 text-center mt-5">Create Food Item</h1>
+
+<div class="container mt-5 mb-5">
+    <form (ngSubmit)="handleSubmit(form)" #form = "ngForm">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel required name="name"/>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Price</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" ngModel required name="price" />
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Description</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" ngModel required name="description" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Image Path</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" ngModel required name="path" />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Cusine</label>
+            <select class="form-select " aria-label="Default select example" ngModel name="cusineId">
+                <option value="1" selected>Caribbean</option>
+                <option value="2">Vietnamese</option>
+                <option value="3">Korean</option>
+                <option value="4">German</option>
+                <option value="5">Indian</option>
+              </select>
+          </div>     
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Status</label>
+            <select class="form-select " aria-label="Default select example" ngModel name="status">
+                <option value="true" selected>Enable</option>
+                <option value="false">Disable</option>
+              </select>
+          </div> 
+          
+      
+        <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Submit" />
+      </form>
+      <p class="lead mt-3" *ngIf="added">{{message}}</p>
+</div>
+

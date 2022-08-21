@@ -1,0 +1,26 @@
+
+
+
+<div class="mb-5 mt-5">
+    <h1 class="display-5 text-center mt-5 mb-5">Login</h1>
+    <form (ngSubmit)="handleLogin(form)" #form = "ngForm"  class=" mt-5 mb-5" >
+
+
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <input class="form-control" placeholder="Enter User Name" type="text" ngModel name="userName"  id="username" >
+        </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" placeholder="Enter Password" type="password" ngModel name="password"  id="password" >
+    </div>
+    <p *ngIf="!authenticated">Wrong Username or password</p>
+    <p class="text-end fs-6"><a routerLink="../customerSignUp" style="text-decoration:none ;">Sign Up</a></p>
+        
+    <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Log In">
+
+</form>
+
+
+</div>

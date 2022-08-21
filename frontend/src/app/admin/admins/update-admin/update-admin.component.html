@@ -1,0 +1,32 @@
+
+<div>
+    <h1 class="display-5 text-center mb-5">Update Details</h1>
+    <form   (ngSubmit)="handleRegisterSubmit()" #form = "ngForm" class="mb-5" >
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input class="form-control" [(ngModel)]="admin.email" type="email" ngModel  name="email" required email #email="ngModel" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input class="form-control" [(ngModel)]="admin.firstName" type="text" ngModel name="firstName" required id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <input class="form-control" [(ngModel)]="admin.lastName" type="text" ngModel name="lastName" required  id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input class="form-control" [(ngModel)]="admin.password" type="password" ngModel name="password" required id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phone</label>
+            <input class="form-control" [(ngModel)]="admin.phone" type="number" ngModel name="phone" required id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User Name</label>
+            <input class="form-control" [(ngModel)]="admin.userName" type="text" ngModel name="userName" required id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+    
+    <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Submit">
+</form>
+</div>

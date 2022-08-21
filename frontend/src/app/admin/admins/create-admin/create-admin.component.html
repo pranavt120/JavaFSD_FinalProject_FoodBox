@@ -1,0 +1,41 @@
+
+
+<div>
+    <h1 class="display-5 text-center mt-5 mb-5">Add Cusine</h1>
+    <form (ngSubmit)="handleRegisterSubmit()" #form = "ngForm"  class=" mt-5 mb-5" >
+        <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input class="form-control"  placeholder="Enter Email" type="text" ngModel  name="email" required email #email="ngModel" id="email" >
+        <p *ngIf="!email.valid && email.touched">Please enter a valid value!</p>    
+    </div>
+    <div class="mb-3">
+        <label for="firstname" class="form-label">First Name</label>
+        <input class="form-control" placeholder="Enter First Name" type="text" ngModel name="firstName" required id="firstname" >
+    </div>
+
+    <div class="mb-3">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input class="form-control" placeholder="Enter Last Name" type="text" ngModel name="lastName" required id="lastname" >
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" placeholder="Enter Password" type="password" ngModel name="password" required id="password" >
+    </div>
+
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input class="form-control" placeholder="Enter Phone" type="number" ngModel name="phone" required  id="phone" >
+    </div>
+
+    <div class="mb-3">
+        <label for="username" class="form-label">User Name</label>
+        <input class="form-control" placeholder="Enter User Name" type="text" ngModel name="userName" required id="username" >
+    </div>
+        
+    <input type="submit" class="btn btn-primary" [disabled]="!form.valid" value="Submit">
+
+</form>
+<p *ngIf="!adminNotRegistered && requestMade">{{status}}</p>
+<p *ngIf="adminNotRegistered && requestMade">{{status}}</p>
+</div>

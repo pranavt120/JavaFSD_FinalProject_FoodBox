@@ -1,0 +1,17 @@
+
+
+
+
+
+.form{
+    max-width: 30%;
+    margin: auto;
+    height: 100vh;
+    /* box-shadow:  5px 0 7px -4px rgba(57, 57, 57, 0.3), -5px 0 7px -4px rgba(56, 56, 56, 0.3); */
+    border: 1px solid rgba(103, 102, 102, 0.2);
+
+}
+
+input.ng-invalid input.ng-touched{
+    border: 1px solid red;
+}

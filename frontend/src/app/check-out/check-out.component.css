@@ -1,0 +1,9 @@
+
+
+.pay-now:hover{
+    cursor: pointer;
+    background-color: white !important;
+    color: green !important;
+    font-size: medium;
+    transition: all 0.2s;
+}
